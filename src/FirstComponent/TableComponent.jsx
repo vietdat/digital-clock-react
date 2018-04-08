@@ -11,12 +11,26 @@ class Table extends React.Component {
     // Conditionally load a component:
     return (
       <div id="clock">
-        <Eight type={0}/>
-        <Eight type={1}/>
-        <Eight type={2}/>
-        <Eight type={3}/>
-        <Eight type={4}/>
-        <Eight type={5}/>
+        <div class="hour"> 
+          <Eight type={0}/>
+          <Eight type={1}/>
+        </div>
+        <div class="colon">
+          <div class="colon1"></div>
+          <div class="colon2"></div>
+        </div>
+        <div class="minute">
+          <Eight type={2}/>
+          <Eight type={3}/>
+        </div>
+        <div class="colon">
+          <div class="colon1"></div>
+          <div class="colon2"></div>
+        </div>
+        <div class="second">
+          <Eight type={4}/>
+          <Eight type={5}/>
+        </div>
       </div>
     );
   }
@@ -141,30 +155,47 @@ class Eight extends React.Component {
 
   render() {
     return (
-      <div class = "eight"> 
-        <div>
-                 
-          <div class="line1 row" style = {{display: this.state.line1}}></div>
+      <div class = "number"> 
+        <div class="row-container">
+          <div class="arrow-left" style = {{display: this.state.line1}}></div>
+          <div class="line1 row-mid" style = {{display: this.state.line1}}></div>
+          <div class="arrow-right" style = {{display: this.state.line1}}></div>
         </div>
         
-        <div class="mid">
-          <div>
+        <div class="mid-container">
+          <div class="mid-left">
             <div class="arrow-up-left" style = {{display: this.state.line2}}></div>   
-            <div class="line2 col left" style = {{display: this.state.line2}}></div>
+            <div class="line2 col" style = {{display: this.state.line2}}></div>
+            <div class="arrow-down-left left" style = {{display: this.state.line2}}></div> 
           </div>
-          <div>
-            <div class="arrow-up-left" style = {{display: this.state.line3}}></div>   
+          <div class="mid-right">
+            <div class="arrow-up-right right" style = {{display: this.state.line3}}></div>   
             <div class="line3 col right" style = {{display: this.state.line3}}></div>
+            <div class="arrow-down-right right" style = {{display: this.state.line3}}></div>   
           </div>
-          
-         
         </div>
-        <div class="line4 row" style = {{display: this.state.line4}}></div>
-        <div class="mid">
-          <div class="line5 col left" style = {{display: this.state.line5}}></div>
-          <div class="line6 col right" style = {{display: this.state.line6}}></div>
+        <div class="mid-row-container"> 
+          <div class="arrow-mid-left left" style = {{display: this.state.line4}}></div>   
+          <div class="line4 row-mid-2" style = {{display: this.state.line4}}></div>
+          <div class="arrow-mid-right right" style = {{display: this.state.line4}}></div>   
         </div>
-        <div class="line7 row" style = {{display: this.state.line7}}></div>
+        <div class="mid-container-2">
+          <div class="mid-left">
+            <div class="arrow-up-left-2" style = {{display: this.state.line5}}></div>
+            <div class="line5 col" style = {{display: this.state.line5}}></div>
+            <div class="arrow-down-left-2 left" style = {{display: this.state.line5}}></div>   
+          </div>
+          <div class="mid-right">
+            <div class="arrow-up-right-2 right" style = {{display: this.state.line6}}></div> 
+            <div class="line6 col right" style = {{display: this.state.line6}}></div>
+            <div class="arrow-down-right-2 right" style = {{display: this.state.line6}}></div>
+          </div>
+        </div>
+        <div class="row-container-2">
+          <div class="arrow-left-2" style = {{display: this.state.line7}}></div>
+          <div class="line7 row-mid" style = {{display: this.state.line7}}></div>
+          <div class="arrow-right-2" style = {{display: this.state.line7}}></div>
+        </div>
       </div>
     );
   }

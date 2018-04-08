@@ -38,7 +38,47 @@
   height: 60px;
   background-color: red;
 }
-.row {
+
+.row-container {
+  display: block;
+  position: absolute;
+  line-height: 10px;
+}
+
+.row-container-2 {
+  margin-top: 149px;
+  display: block;
+  position: absolute;
+  line-height: 10px;
+}
+
+.row-container .row-mid {
+  display: inline-block;
+  position: relative;
+}
+
+.row-container .arrow-left {
+  display: inline-block;
+  position: relative;
+}
+
+.row-container-2 .arrow-left {
+  display: inline-block;
+  position: relative;
+}
+
+.row-container-2 .row-mid {
+  display: inline-block;
+  position: relative;
+}
+
+.row-mid {
+  width: 70px;
+  height: 10px;
+  background-color: red;
+}
+
+.row-mid-2 {
   width: 70px;
   height: 10px;
   background-color: red;
@@ -46,18 +86,117 @@
 
 .arrow-up-left {
   width: 0; 
-  height: 0; 
-  /* border-left: 3px solid transparent; */
+  height: 0;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid red;
+}
+
+.arrow-up-left-2 {
+  width: 0; 
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid red;
+}
+
+.arrow-down-left {
+  width: 0; 
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid red;
+}
+
+.arrow-down-left-2 {
+  width: 0; 
+  height: 0;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid red;
+  border-top: 10px solid red;
 }
 
 .arrow-up-right {
   width: 0; 
   height: 0; 
   border-left: 10px solid transparent;
-  /* border-right: 3px solid transparent; */
   border-bottom: 10px solid red;
+}
+
+.arrow-up-right-2 {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid red;
+}
+
+.arrow-down-right {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid red;
+}
+
+.arrow-down-right-2 {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-top: 10px solid red;
+}
+
+.arrow-mid-left {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-right: 5px solid red;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.arrow-mid-right {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid red;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  /* border-top: 10px solid transparent; */
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid red; 
+  float: left;
+}
+
+.arrow-left-2 {
+  width: 0; 
+  height: 0; 
+  /* border-top: 10px solid transparent; */
+  border-top: 10px solid transparent; 
+  border-right:10px solid red; 
+  float: left;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  /* border-top: 10px solid transparent; */
+  border-bottom: 10px solid transparent; 
+  border-left:10px solid red; 
+  float: right;
+}
+
+.arrow-right-2 {
+  width: 0; 
+  height: 0; 
+  /* border-top: 10px solid transparent; */
+  border-top: 10px solid transparent; 
+  border-left:10px solid red; 
+  float: right;
 }
 
 .arrow-down {
@@ -67,10 +206,9 @@
   border-right: 20px solid transparent;
   border-top: 20px solid red;
 }
-
   
-.eight {
-  width: 70px;
+.number {
+  width: 90px;
   height: 80px;
   display: inline-block;
   margin-right: 20px;
@@ -88,10 +226,72 @@
   float:left;
 }
 
-.mid {
+.mid-container {
+  position: absolute;
+  margin-top: 1px;
+  width: 90px;
   height: 60px;
 }
 
+.mid-container-2 {
+  position: absolute;
+  margin-top: 80px;
+  width: 90px;
+  height: 60px;
+}
+
+.mid-row-container {
+  position: absolute;
+  display: block;
+  margin-left: 5px;
+  line-height: 10px;
+  margin-top: 75px;
+}
+
+.mid-row-container .row-mid-2 {
+  display: inline-block;
+  position: relative;
+}
+
+.mid-left {
+  width: 10px;
+  float: left;
+  margin-top: 2px;
+}
+
+.mid-right {
+  width: 10px;
+  float: right;
+  margin-top: 2px;
+}
+
+.hour, .minute, .second, .colon {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.colon1 {
+  width: 10px;
+  margin: 10px;
+  height: 10px;
+  display: block;
+  background: red;
+}
+
+.colon2 {
+  width: 10px;
+  margin: 10px;
+  height: 10px;
+  display: block;
+  background: red;
+}
+
+#clock {
+  height: 200px;
+  width: 900px;
+  margin-top: 50px;
+  border: 5px solid red;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
